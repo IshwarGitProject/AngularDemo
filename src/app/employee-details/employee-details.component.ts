@@ -15,10 +15,12 @@ export class EmployeeDetailsComponent implements OnInit {
   employeeForm: any;  
   allEmployees: Observable<EmployeeDetails[]>;  
   massage = null;  
+  employee : EmployeeDetails[];
   constructor(private formbulider: FormBuilder,private appServiceService: AppServiceService) { }
 
   ngOnInit() {
   this.Validation();
+  this.GetAll();
   }
   Validation(){
     this.employeeForm = this.formbulider.group({  
@@ -31,6 +33,13 @@ export class EmployeeDetailsComponent implements OnInit {
      });
   }
   GetAll(){
+    this.appServiceService.getAllEmployees().subscribe(
+      res => {
+       if(res){         
+          this.employee = res;
+         
+       }     
+     }); 
 
   }
   onFormSubmit() {  

@@ -1,11 +1,11 @@
 export class EmployeeDetails {
-    EmpId: string;  
-    EmpName: string;  
-    DateOfBirth: Date;  
-    EmailId: string;  
-    Gender: number;  
-    Address: string;  
-    PinCode: number;  
+    empId: string;  
+    empName: string;  
+    dateOfBirth: Date;  
+    emailId: string;  
+    gender: number;  
+    address: string;  
+    pinCode: number;  
 
     constructor(){     
     }

@@ -13,7 +13,10 @@ import {
 } from '@angular/material';  
 import { MatRadioModule } from '@angular/material/radio';  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EmployeeDetailsComponent } from './employee-details/employee-details.component'; 
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { RedComponentComponent } from './red-component/red-component.component'; 
+import {AgGridModule} from "ag-grid-angular";
+import { MyGridApplicationComponent } from './my-grid-application/my-grid-application.component';
 
 
 
@@ -21,7 +24,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 @NgModule({
   declarations: [
     AppComponent, 
-    HomeComponent, Test1Component, EmployeeDetailsComponent
+    HomeComponent, Test1Component, EmployeeDetailsComponent, RedComponentComponent, MyGridApplicationComponent
   ],
   imports: [
     FormsModule,
@@ -41,7 +44,8 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
     MatTooltipModule, 
     MatToolbarModule,
     MatRadioModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AgGridModule
   ],
   providers: [AppServiceService,MatDatepickerModule],
   bootstrap: [AppComponent]

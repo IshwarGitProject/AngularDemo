@@ -27,6 +27,9 @@ export class AppServiceService {
   getEmployees() {  
     return this._http.get<Employee[]>(this.myAppUrl + 'api/EmployeeDetails/GetEmployeeDetails');       
   }
+  getAllEmployees() {  
+    return this._http.get<EmployeeDetails[]>(this.myAppUrl + 'api/EmployeeDetails/GetEmployeeDetails');       
+  }
   insertEmployee(employee : Employee) {  
 
     //const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };    
